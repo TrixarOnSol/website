@@ -12,6 +12,7 @@ import {
   Link,
   Image,
   useToast,
+  SimpleGrid,
 } from '@chakra-ui/react'
 import { CopyIcon, CheckIcon } from '@chakra-ui/icons'
 import { FaTwitter, FaTelegram, FaChartBar } from 'react-icons/fa'
@@ -88,7 +89,7 @@ function App() {
       </Box>
 
       {/* Hero Section with Carousel */}
-      <Box position="relative" h="100vh" overflow="hidden">
+          <Box position="relative" h="100vh" overflow="hidden">
         {images.map((image, idx) => (
           <Box
             key={idx}
@@ -183,98 +184,116 @@ function App() {
                 </Button>
               </Link>
             </HStack>
+
+          {/* Hero Content */}
+    <Flex
+      position="relative"
+      direction="column"
+      align="center"
+      justify="center"
+      h="full"
+      color="white"
+      px={4}
+      zIndex={3}
+    >
+      <Box
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        maxW="container.md"
+        w="full"
+      >
+
+        {/* Content Sections in Grid */}
+        <SimpleGrid
+          columns={{ base: 1, md: 2, lg: 3 }}
+          spacing={8}
+          w="full"
+          maxW="container.xl"
+          px={4}
+        >
+          {/* Concept Card */}
+          <Box
+            bg="whiteAlpha.200"
+            backdropFilter="blur(10px)"
+            borderRadius="xl"
+            overflow="hidden"
+            border="1px solid"
+            borderColor="whiteAlpha.300"
+          >
+            <Image
+              src="/path/to/concept.jpg"
+              alt="Concept"
+              w="full"
+              h="150px"
+              objectFit="cover"
+            />
+            <Box p={6}>
+              <Heading size="md" mb={3} color="white">Concept</Heading>
+              <Text color="whiteAlpha.900" fontSize="sm">
+                Trixar represents the next evolution in meme coins, combining
+                community-driven development with real utility.
+              </Text>
+            </Box>
+          </Box>
+
+          {/* Roadmap Card */}
+          <Box
+            bg="whiteAlpha.200"
+            backdropFilter="blur(10px)"
+            borderRadius="xl"
+            overflow="hidden"
+            border="1px solid"
+            borderColor="whiteAlpha.300"
+          >
+            <Image
+              src="/path/to/roadmap.jpg"
+              alt="Roadmap"
+              w="full"
+              h="150px"
+              objectFit="cover"
+            />
+            <Box p={6}>
+              <Heading size="md" mb={3} color="white">Roadmap</Heading>
+              <Text color="whiteAlpha.900" fontSize="sm">
+                Q1 2025: Launch and marketing<br />
+                Q2 2025: DEX listings<br />
+                Q3 2025: Platform development
+              </Text>
+            </Box>
+          </Box>
+
+          {/* Liquidity Card */}
+          <Box
+            bg="whiteAlpha.200"
+            backdropFilter="blur(10px)"
+            borderRadius="xl"
+            overflow="hidden"
+            border="1px solid"
+            borderColor="whiteAlpha.300"
+          >
+            <Image
+              src="/path/to/liquidity.jpg"
+              alt="Liquidity"
+              w="full"
+              h="150px"
+              objectFit="cover"
+            />
+            <Box p={6}>
+              <Heading size="md" mb={3} color="white">Liquidity</Heading>
+              <Text color="whiteAlpha.900" fontSize="sm">
+                95% of tokens in circulation, 5% reserved for development.
+                Liquidity locked for 12 months.
+              </Text>
+            </Box>
+          </Box>
+        </SimpleGrid>
+      </Box>
+    </Flex>
           </Box>
         </Flex>
       </Box>
 
-      {/* Content Sections */}
-      <Container maxW="container.xl" py={16}>
-        {/* Concept Section */}
-        <Flex
-          direction={{ base: "column", md: "row" }}
-          mb={16}
-          align="center"
-          gap={8}
-        >
-          <Box flex="1" maxW={{ base: "full", md: "400px" }}>
-            <Image
-              src="/path/to/concept.jpg"
-              alt="Concept"
-              borderRadius="xl"
-              w="full"
-              h="300px"
-              objectFit="cover"
-              shadow="xl"
-            />
-          </Box>
-          <Box flex="1">
-            <Heading mb={4} color="purple.500">Concept</Heading>
-            <Text fontSize="lg" color="gray.700">
-              Trixar represents the next evolution in meme coins, combining
-              community-driven development with real utility. Our vision is to
-              create not just another token, but a movement that redefines what's
-              possible in the world of cryptocurrency.
-            </Text>
-          </Box>
-        </Flex>
-
-        {/* Roadmap Section */}
-        <Flex
-          direction={{ base: "column", md: "row" }}
-          mb={16}
-          align="center"
-          gap={8}
-        >
-          <Box flex="1" maxW={{ base: "full", md: "400px" }}>
-            <Image
-              src="/path/to/roadmap.jpg"
-              alt="Roadmap"
-              borderRadius="xl"
-              w="full"
-              h="300px"
-              objectFit="cover"
-              shadow="xl"
-            />
-          </Box>
-          <Box flex="1">
-            <Heading mb={4} color="purple.500">Roadmap</Heading>
-            <Text fontSize="lg" color="gray.700">
-              Q1 2025: Launch and initial marketing push<br />
-              Q2 2025: DEX listings and partnerships<br />
-              Q3 2025: Platform development and ecosystem expansion<br />
-              Q4 2025: Community governance implementation
-            </Text>
-          </Box>
-        </Flex>
-
-        {/* Liquidity Section */}
-        <Flex
-          direction={{ base: "column", md: "row" }}
-          align="center"
-          gap={8}
-        >
-          <Box flex="1" maxW={{ base: "full", md: "400px" }}>
-            <Image
-              src="/path/to/liquidity.jpg"
-              alt="Liquidity"
-              borderRadius="xl"
-              w="full"
-              h="300px"
-              objectFit="cover"
-              shadow="xl"
-            />
-          </Box>
-          <Box flex="1">
-            <Heading mb={4} color="purple.500">Liquidity</Heading>
-            <Text fontSize="lg" color="gray.700">
-              95% of tokens are in circulation with 5% reserved for development.
-              Liquidity locked for 12 months to ensure project stability and
-              investor confidence. Our tokenomics are designed for long-term
-              sustainability and growth.
-            </Text>
-          </Box>
-        </Flex>
-      </Container>
     </Box>
   )
 }
