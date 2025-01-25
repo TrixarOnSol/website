@@ -89,7 +89,14 @@ function App() {
       </Box>
 
       {/* Hero Section with Carousel */}
-          <Box position="relative" h="100vh" overflow="hidden">
+          <Box
+  position="relative"
+  minH="100vh"
+  pt={{ base: '0', sm: '8em', md: '8em' }}
+  pb='3em'
+  h={{ base: "auto", md: "100vh" }}
+  overflow={{ base: "auto", md: "hidden" }}
+>
         {images.map((image, idx) => (
           <Box
             key={idx}
@@ -164,22 +171,23 @@ function App() {
               }}
               leftIcon={hasCopied ? <CheckIcon /> : <CopyIcon />}
               colorScheme="purple"
-              size="lg"
+              size="md"
+              variant='subtle'
             >
               {CONTRACT_ADDRESS.slice(0, 6) + "..." + CONTRACT_ADDRESS.slice(-4)}
             </Button>
 
             <HStack spacing={4} justify="center" wrap="wrap">
               <Link href="https://dexscreener.com/solana/7ytvjf7lm84z9aqntaz5qtxd57yf6gjgto62lxfwwffg" isExternal>
-                <Button colorScheme="blue" size="lg">DexScreener</Button>
+                <Button colorScheme="blue" size="sm">DexScreener</Button>
               </Link>
               <Link href="https://x.com/TrixarOnSol" isExternal>
-                <Button colorScheme="twitter" leftIcon={<FaTwitter />} size="lg">
+                <Button colorScheme="twitter" leftIcon={<FaTwitter />} size="sm">
                   Twitter
                 </Button>
               </Link>
               <Link href="https://t.me/TrixarOnSol" isExternal>
-                <Button colorScheme="telegram" leftIcon={<FaTelegram />} size="lg">
+                <Button colorScheme="telegram" leftIcon={<FaTelegram />} size="sm">
                   Telegram
                 </Button>
               </Link>
@@ -202,6 +210,7 @@ function App() {
         alignItems="center"
         maxW="container.md"
         w="full"
+        pt='3em'
       >
 
         {/* Content Sections in Grid */}
@@ -222,7 +231,7 @@ function App() {
             borderColor="whiteAlpha.300"
           >
             <Image
-              src="/path/to/concept.jpg"
+              src="/concept.png"
               alt="Concept"
               w="full"
               h="150px"
@@ -231,8 +240,7 @@ function App() {
             <Box p={6}>
               <Heading size="md" mb={3} color="white">Concept</Heading>
               <Text color="whiteAlpha.900" fontSize="sm">
-                Trixar represents the next evolution in meme coins, combining
-                community-driven development with real utility.
+                Take Trump, animate him, and fuse his second term with the culture of crypto and Solana meme coins.
               </Text>
             </Box>
           </Box>
@@ -247,7 +255,7 @@ function App() {
             borderColor="whiteAlpha.300"
           >
             <Image
-              src="/path/to/roadmap.jpg"
+              src="roadmap.png"
               alt="Roadmap"
               w="full"
               h="150px"
@@ -256,9 +264,7 @@ function App() {
             <Box p={6}>
               <Heading size="md" mb={3} color="white">Roadmap</Heading>
               <Text color="whiteAlpha.900" fontSize="sm">
-                Q1 2025: Launch and marketing<br />
-                Q2 2025: DEX listings<br />
-                Q3 2025: Platform development
+                Continious content. Regular contests. Upcoming collaborations. Youtube. More soon...
               </Text>
             </Box>
           </Box>
@@ -273,7 +279,7 @@ function App() {
             borderColor="whiteAlpha.300"
           >
             <Image
-              src="/path/to/liquidity.jpg"
+              src="liquidity.png"
               alt="Liquidity"
               w="full"
               h="150px"
@@ -281,18 +287,20 @@ function App() {
             />
             <Box p={6}>
               <Heading size="md" mb={3} color="white">Liquidity</Heading>
-              <Text color="whiteAlpha.900" fontSize="sm">
+              <Text color="whiteAlpha.900" fontSize="sm"> Fair launch on pump.fun
                 95% of tokens in circulation, 5% reserved for development.
-                Liquidity locked for 12 months.
+                Liquidity locked.
               </Text>
             </Box>
           </Box>
         </SimpleGrid>
+    <Text textAlign='center' fontSize='12px' mt='3em'>$TRIXAR is not considered an investment and is for entertainment purposes only. Nothing on this site, in the community telegram, or on the official X account should be construed as financial advice.
+    </Text>
       </Box>
     </Flex>
-          </Box>
-        </Flex>
-      </Box>
+    </Box>
+    </Flex>
+    </Box>
 
     </Box>
   )
