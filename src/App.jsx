@@ -17,7 +17,7 @@ import { CopyIcon, CheckIcon } from '@chakra-ui/icons'
 import { FaTwitter, FaTelegram, FaChartBar } from 'react-icons/fa'
 
 function App() {
-  const CONTRACT_ADDRESS = "your_contract_address_here"
+  const CONTRACT_ADDRESS = "32Q5LSoQUk24kVSbwBdvCA2sbZXR1ihitNpiEHBLpump"
   const { hasCopied, onCopy } = useClipboard(CONTRACT_ADDRESS)
   const toast = useToast()
 
@@ -63,6 +63,7 @@ function App() {
                 aria-label="Twitter"
                 variant="ghost"
                 color="white"
+                onClick={()=>{window.open('https://x.com/TrixarOnSol', '_blank').focus();}}
                 _hover={{ bg: 'whiteAlpha.200' }}
               />
               <IconButton
@@ -70,6 +71,7 @@ function App() {
                 aria-label="Telegram"
                 variant="ghost"
                 color="white"
+                onClick={()=>{window.open('https://t.me/TrixarOnSol', '_blank').focus();}}
                 _hover={{ bg: 'whiteAlpha.200' }}
               />
               <IconButton
@@ -77,6 +79,7 @@ function App() {
                 aria-label="Chart"
                 variant="ghost"
                 color="white"
+                onClick={()=>{window.open('https://dexscreener.com/solana/7ytvjf7lm84z9aqntaz5qtxd57yf6gjgto62lxfwwffg', '_blank').focus();}}
                 _hover={{ bg: 'whiteAlpha.200' }}
               />
             </HStack>
@@ -166,15 +169,15 @@ function App() {
             </Button>
 
             <HStack spacing={4} justify="center" wrap="wrap">
-              <Link href="https://dexscreener.com" isExternal>
+              <Link href="https://dexscreener.com/solana/7ytvjf7lm84z9aqntaz5qtxd57yf6gjgto62lxfwwffg" isExternal>
                 <Button colorScheme="blue" size="lg">DexScreener</Button>
               </Link>
-              <Link href="https://twitter.com" isExternal>
+              <Link href="https://x.com/TrixarOnSol" isExternal>
                 <Button colorScheme="twitter" leftIcon={<FaTwitter />} size="lg">
                   Twitter
                 </Button>
               </Link>
-              <Link href="https://telegram.org" isExternal>
+              <Link href="https://t.me/TrixarOnSol" isExternal>
                 <Button colorScheme="telegram" leftIcon={<FaTelegram />} size="lg">
                   Telegram
                 </Button>
