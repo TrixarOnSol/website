@@ -125,20 +125,26 @@ function App() {
           px={4}
           zIndex={3}
         >
+          <Box display="inline-block" textAlign="center" transform="translateX(0)">
           <Heading
             fontSize={{ base: "4xl", md: "6xl" }}
             mb={4}
+            ml="0.8em"
+            letterSpacing="0.8em"
             fontFamily="'Trixar', sans-serif"
             textShadow="2px 2px 4px rgba(0,0,0,0.4)"
           >
             TRIXAR
           </Heading>
+          </Box>
           <Text
             fontSize={{ base: "xl", md: "2xl" }}
             mb={8}
+            mt="-0.5em"
             textShadow="1px 1px 2px rgba(0,0,0,0.4)"
+          textAlign="center"
           >
-            The Next Generation of Meme Finance
+            The Next Four Years Are Going to be Animated 
           </Text>
 
           <Box>
