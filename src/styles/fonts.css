@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Trixar';
+  src: url('/fonts/Trixar.ttf') format('truetype');
+  /* Add additional formats if you have them:
+  src: url('/fonts/CustomFont.woff2') format('woff2'),
+       url('/fonts/CustomFont.woff') format('woff'),
+       url('/fonts/CustomFont.ttf') format('truetype'); */
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
