@@ -1,2 +1,2 @@
 # website
-The Official TrixarOnSol Website
+The Official TrixarOnSol Website.
