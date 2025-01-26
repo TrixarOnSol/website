@@ -92,7 +92,7 @@ function App() {
           <Box
   position="relative"
   minH="100vh"
-  pt={{ base: '0', sm: '8em', md: '8em' }}
+  pt={{ base: '8em', sm: '8em', md: '8em' }}
   pb='3em'
   h={{ base: "auto", md: "100vh" }}
   overflow={{ base: "auto", md: "hidden" }}
